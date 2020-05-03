@@ -1231,6 +1231,14 @@ img {
       .disclaimer a {
         padding: 0.9rem 0; } }
 
+@keyframes appearance {
+  from {
+    width: 0;
+    margin-left: auto; }
+  to {
+    width: 89%;
+    margin-left: auto; } }
+
 .form {
   position: relative;
   display: flex;
@@ -1271,7 +1279,10 @@ img {
   color: #5f458c;
   border: 0;
   border-radius: 3rem;
-  outline: none; }
+  outline: none;
+  transition: 0.3s;
+  animation-duration: 1s;
+  animation-name: appearance; }
   .form__field:focus {
     border: 1px solid #a67ee5; }
   @media (min-width: 2000px) {
