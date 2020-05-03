@@ -1,3 +1,13 @@
+@keyframes menu-line {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
 .page-header {
   position: fixed;
   top: 0;
@@ -278,12 +288,17 @@
 
     &:hover,
     &:focus {
+      transition: 0.3s;
       color: $c-purple;
       outline: none;
 
       &::after {
+        display: block;
         opacity: 1;
         background-color: $c-purple;
+        transition: 0.3s;
+        animation-duration: 1s;
+        animation-name: menu-line;
       }
     }
   }

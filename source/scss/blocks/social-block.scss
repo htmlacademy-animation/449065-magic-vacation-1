@@ -3,6 +3,7 @@
 
   &:hover {
     .social-block__list {
+      transition: 0.3s;
       opacity: 1;
       pointer-events: auto;
     }
@@ -47,10 +48,12 @@
   &:hover,
   .social-block--active & {
     color: $c-purple;
+    transition: 0.3s;
 
     &::before {
       width: 112.5%;
       height: 112.5%;
+      transition: 0.3s;
     }
   }
 
@@ -186,6 +189,7 @@
 
   &:hover {
     color: $c-purple;
+    transition: 0.3s;
   }
 
   &:focus {
@@ -193,6 +197,7 @@
     background-color: $c-light;
     border-color: $c-purple;
     outline: none;
+    transition: 0.3s;
   }
 
   &:active,
@@ -200,6 +205,7 @@
     color: $c-purple;
     background-color: $c-light;
     border-color: $c-light;
+    transition: 0.3s;
   }
 
   svg {
