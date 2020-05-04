@@ -1004,6 +1004,14 @@ img {
       background-color: #a67ee5;
       border-color: #a67ee5; }
 
+@keyframes appearance {
+  from {
+    width: 0;
+    margin-left: auto; }
+  to {
+    width: 100%;
+    margin-left: auto; } }
+
 .chat {
   flex-grow: 1;
   display: flex;
@@ -1154,7 +1162,10 @@ img {
     opacity: 0; }
 
 .chat__footer {
-  margin-top: auto; }
+  margin-top: auto;
+  transition: 0.3s;
+  animation-duration: 1s;
+  animation-name: appearance; }
 
 .disclaimer {
   color: #5f458c;
@@ -1231,14 +1242,6 @@ img {
       .disclaimer a {
         padding: 0.9rem 0; } }
 
-@keyframes appearance {
-  from {
-    width: 0;
-    margin-left: auto; }
-  to {
-    width: 89%;
-    margin-left: auto; } }
-
 .form {
   position: relative;
   display: flex;
@@ -1280,9 +1283,7 @@ img {
   border: 0;
   border-radius: 3rem;
   outline: none;
-  transition: 0.3s;
-  animation-duration: 1s;
-  animation-name: appearance; }
+  transition: 0.3s; }
   .form__field:focus {
     border: 1px solid #a67ee5; }
   @media (min-width: 2000px) {
@@ -1616,6 +1617,12 @@ img {
   to {
     width: 100%; } }
 
+@keyframes menu-delete-line {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
+
 .page-header {
   position: fixed;
   top: 0;
@@ -1863,6 +1870,15 @@ img {
         transition: 0.3s;
         animation-duration: 1s;
         animation-name: menu-line; }
+    .page-header__menu a:not(:hover) {
+      color: inherit; }
+      .page-header__menu a:not(:hover)::after {
+        display: block;
+        opacity: 1;
+        background-color: #5f458c;
+        transition: 0.3s;
+        animation-duration: 1s;
+        animation-name: menu-delete-line; }
 
 .page-header__social {
   margin-left: 4.8rem; }
@@ -3147,6 +3163,13 @@ img {
       width: 112.5%;
       height: 112.5%;
       transition: 0.3s; }
+  .social-block__toggler:not(:hover) {
+    color: #5f458c;
+    transition: 0.3s; }
+    .social-block__toggler:not(:hover)::before {
+      width: 100%;
+      height: 100%;
+      transition: 0.3s; }
   .social-block__toggler:focus {
     color: #a67ee5;
     outline: none; }
@@ -3233,7 +3256,8 @@ img {
   height: 4rem;
   color: #ffffff;
   border: 2px solid transparent;
-  border-radius: 50%; }
+  border-radius: 50%;
+  transition: 0.3s; }
   @media (min-width: 2000px) {
     .social-block__link {
       width: 40px;
