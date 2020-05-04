@@ -1,0 +1,23 @@
+@keyframes background-prize {
+  from {
+    height: 0;
+    transform: translateY(0);
+  }
+
+  to {
+    height: 100vh;
+    transform: translateY(-100%);
+  }
+}
+
+.background-prize {
+  background-color: $c-dark;
+  z-index: 100;
+}
+
+.screen--prizes.active ~ .background-prize {
+  animation-duration: 1s;
+  animation-name: background-prize;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-out;
+}
