@@ -7,6 +7,5 @@ export default () => {
     logo.classList.add(`page-header__logo--load`);
     navigation.classList.add(`page-header__nav--load`);
     footer.classList.add(`screen__footer--load`);
-    // console.log(`страница загружена`);
   };
 };
