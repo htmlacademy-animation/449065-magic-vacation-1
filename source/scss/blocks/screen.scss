@@ -1,3 +1,13 @@
+@keyframes footer-appear {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 .screen {
   position: relative;
   display: flex;
@@ -46,6 +56,12 @@
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
+
+  &--load {
+    animation-duration: 1s;
+    animation-name: footer-appear;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;

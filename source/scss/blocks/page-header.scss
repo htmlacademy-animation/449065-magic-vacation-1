@@ -1,3 +1,15 @@
+@keyframes logo-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .page-header {
   position: fixed;
   top: 0;
@@ -35,6 +47,12 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+
+  &--load {
+    animation-duration: 1s;
+    animation-name: logo-appear;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -130,6 +148,12 @@
 .page-header__nav {
   display: flex;
   align-items: center;
+
+  &--load {
+    animation-duration: 1s;
+    animation-name: fadeIn;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
