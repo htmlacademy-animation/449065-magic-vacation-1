@@ -1,3 +1,15 @@
+@keyframes intro-apear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -93,6 +105,9 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  transition: 0.3s;
+  animation-duration: 1s;
+  animation-name: intro-apear;
 
   @media (min-width: $stop-scaling) {
     width: 509px;

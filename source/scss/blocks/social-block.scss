@@ -3,6 +3,7 @@
 
   &:hover {
     .social-block__list {
+      transition: 0.3s;
       opacity: 1;
       pointer-events: auto;
     }
@@ -47,10 +48,23 @@
   &:hover,
   .social-block--active & {
     color: $c-purple;
+    transition: 0.3s;
 
     &::before {
       width: 112.5%;
       height: 112.5%;
+      transition: 0.3s;
+    }
+  }
+
+  &:not(:hover) {
+    color: $c-dark;
+    transition: 0.3s;
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
     }
   }
 
@@ -168,6 +182,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transition: 0.3s;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -186,6 +201,7 @@
 
   &:hover {
     color: $c-purple;
+    transition: 0.3s;
   }
 
   &:focus {
@@ -193,6 +209,7 @@
     background-color: $c-light;
     border-color: $c-purple;
     outline: none;
+    transition: 0.3s;
   }
 
   &:active,
@@ -200,6 +217,7 @@
     color: $c-purple;
     background-color: $c-light;
     border-color: $c-light;
+    transition: 0.3s;
   }
 
   svg {

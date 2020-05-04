@@ -1,3 +1,15 @@
+@keyframes appearance {
+  from {
+    width: 0;
+    margin-left: auto;
+  }
+
+  to {
+    width: 100%;
+    margin-left: auto;
+  }
+}
+
 .chat {
   flex-grow: 1;
   display: flex;
@@ -185,4 +197,7 @@
 
 .chat__footer {
   margin-top: auto;
+  // transition: 0.3s;
+  animation-duration: 1s;
+  animation-name: appearance;
 }
