@@ -8,6 +8,16 @@
   }
 }
 
+@keyframes menu-delete-line {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
 .page-header {
   position: fixed;
   top: 0;
@@ -299,6 +309,19 @@
         transition: 0.3s;
         animation-duration: 1s;
         animation-name: menu-line;
+      }
+    }
+
+    &:not(:hover) {
+      color: inherit;
+
+      &::after {
+        display: block;
+        opacity: 1;
+        background-color: $c-dark;
+        transition: 0.3s;
+        animation-duration: 1s;
+        animation-name: menu-delete-line;
       }
     }
   }

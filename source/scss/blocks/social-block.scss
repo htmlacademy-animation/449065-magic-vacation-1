@@ -57,6 +57,17 @@
     }
   }
 
+  &:not(:hover) {
+    color: $c-dark;
+    transition: 0.3s;
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
+    }
+  }
+
   &:focus {
     color: $c-purple;
     outline: none;
@@ -171,6 +182,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transition: 0.3s;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
