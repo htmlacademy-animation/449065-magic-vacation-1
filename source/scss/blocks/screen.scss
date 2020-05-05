@@ -1,3 +1,25 @@
+@keyframes rules-title-scale {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes rules-lead-appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes footer-appear {
   from {
     transform: translateY(100%);
@@ -5,6 +27,32 @@
 
   to {
     transform: translateY(0);
+  }
+}
+
+@keyframes rules-item-appear {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rules-link {
+  from {
+    width: 65px;
+  }
+
+  50% {
+    width: 95px;
+  }
+
+  to {
+    // width: initial;
   }
 }
 
@@ -317,10 +365,6 @@
   }
 }
 
-.screen--prizes {
-  // background-color: $c-dark;
-}
-
 .screen--game {
   position: relative;
   background-color: $c-dark;
@@ -369,4 +413,55 @@
 
 .screen--rules {
   background-color: $c-dark;
+}
+
+.screen--rules.active .rules__title {
+  animation-duration: 1s;
+  animation-name: rules-title-scale;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-out;
+}
+
+.screen--rules.active .rules__lead {
+  animation-duration: 1s;
+  animation-name: rules-lead-appear;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-out;
+}
+
+.screen--rules.active .rules__item {
+  animation-duration: 1s;
+  animation-name: rules-item-appear;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-out;
+
+  &:nth-of-type(1) {
+    animation-delay: 0.3s;
+  }
+
+  &:nth-of-type(2) {
+    animation-delay: 0.5s;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: 0.7s;
+  }
+
+  &:nth-of-type(4) {
+    animation-delay: 0.9s;
+  }
+}
+
+.screen--rules.active .rules__link--animate {
+  animation-duration: 0.4s;
+  animation-name: rules-link;
+  transition-timing-function: linear;
+}
+
+.screen--rules.active .rules__link-text--animate {
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-out;
+  animation-delay: 1s;
 }
