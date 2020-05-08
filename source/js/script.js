@@ -11,6 +11,7 @@ import FullPageScroll from './modules/full-page-scroll';
 import global from './modules/global.js';
 import animationsRules from './modules/animations-rules.js';
 import wordAnimation from './modules/word-animation.js';
+// import history from './modules/history.js';
 
 // init modules
 global();
@@ -24,6 +25,7 @@ form();
 social();
 animationsRules();
 wordAnimation();
+// history();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

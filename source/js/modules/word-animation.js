@@ -4,7 +4,7 @@ import {AccentTypographyBuild} from '../methods/AccentTypographyBuild.js';
 // intro__label
 
 export default () => {
-  const animationIntroTitleText = new AccentTypographyBuild(`.intro__title`, 500, `active`, `fadeIn`);
+  const animationIntroTitleText = new AccentTypographyBuild(`.intro__title`, 500, `active`, `transform`);
   setTimeout(()=>{
     animationIntroTitleText.runAnimation();
   }, 500);

@@ -17,11 +17,23 @@ class AccentTypographyBuild {
     this.prePareText();
   }
 
-  createElement(letter) {
+  createElement(letter, index) {
+    const _index = index + 1;
     const span = document.createElement(`span`);
     span.textContent = letter;
+
+    if (_index % 3 === 0) {
+      this._timeOffset -= 30;
+    } else {
+      this._timeOffset += 60;
+    }
+
+    if (index === 0) {
+      this._timeOffset = 0;
+    }
+
     span.style.transition = `${this._property} ${this._timer}ms ease ${this._timeOffset}ms`;
-    this._timeOffset += 20;
+
     return span;
   }
 
@@ -29,11 +41,11 @@ class AccentTypographyBuild {
     if (!this._element) {
       return;
     }
-    const text = this._element.textContent.trim().split(` `).filter((latter)=>latter !== '');
+    const text = this._element.textContent.trim().split(` `).filter((letter)=>letter !== '');
 
     const content = text.reduce((fragmentParent, word) => {
-      const wordElement = Array.from(word).reduce((fragment, latter) => {
-        fragment.appendChild(this.createElement(latter));
+      const wordElement = Array.from(word).reduce((fragment, letter, index) => {
+        fragment.appendChild(this.createElement(letter, index));
         return fragment;
       }, document.createDocumentFragment());
       const wordContainer = document.createElement(`span`);
