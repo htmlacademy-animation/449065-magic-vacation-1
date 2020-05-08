@@ -96,13 +96,11 @@
   font-size: 1.8rem;
   line-height: 2rem;
   transition: 0.3s;
-  // animation-duration: 1s;
-  // animation-name: fadeIn;
 
-  &--animation {
-    animation-duration: 1s;
-    animation-name: fadeIn;
-  }
+  // &--animation {
+  //   animation-duration: 1s;
+  //   animation-name: fadeIn;
+  // }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
