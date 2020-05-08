@@ -177,3 +177,11 @@
     font-size: 48px;
   }
 }
+
+.intro__title.active .text__word {
+  animation-duration: 1s;
+  animation-name: fadeIn;
+  animation-fill-mode: forwards;
+  transition-timing-function: ease-out;
+  animation-delay: 1s;
+}

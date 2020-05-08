@@ -10,6 +10,7 @@ import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import global from './modules/global.js';
 import animationsRules from './modules/animations-rules.js';
+import wordAnimation from './modules/word-animation.js';
 
 // init modules
 global();
@@ -22,6 +23,7 @@ result();
 form();
 social();
 animationsRules();
+wordAnimation();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

@@ -278,3 +278,8 @@
     }
   }
 }
+
+.screen--story.active ~ .slider__item-text {
+  animation-duration: 1s;
+  animation-name: fadeIn;
+}
