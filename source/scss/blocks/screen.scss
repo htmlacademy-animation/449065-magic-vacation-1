@@ -52,7 +52,7 @@
   }
 
   to {
-    // width: initial;
+    width: initial;
   }
 }
 
@@ -455,6 +455,7 @@
 .screen--rules.active .rules__link--animate {
   animation-duration: 0.4s;
   animation-name: rules-link;
+  animation-fill-mode: forwards;
   transition-timing-function: linear;
 }
 

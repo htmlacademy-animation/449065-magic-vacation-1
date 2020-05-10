@@ -96,6 +96,12 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  transition: 0.3s;
+
+  // &--animation {
+  //   animation-duration: 1s;
+  //   animation-name: fadeIn;
+  // }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -275,4 +281,14 @@
       background-color: $c-light;
     }
   }
+}
+
+.slider__item.swiper-slide-active .slider__item-text {
+  animation-duration: 1s;
+  animation-name: fadeIn;
+}
+
+.slider__item.swiper-slide-next .slider__item-text {
+  animation-duration: 1s;
+  animation-name: fadeIn;
 }
