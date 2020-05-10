@@ -195,6 +195,10 @@
   overflow: hidden;
 }
 
+.intro__label .text__word {
+  margin: 0 5px;
+}
+
 .text__word > span {
   transform: translate3d(0, 1.1em, 0);
   display: inline-block;
