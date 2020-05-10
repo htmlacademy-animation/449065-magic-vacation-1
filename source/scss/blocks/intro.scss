@@ -37,7 +37,7 @@
 
 .intro__title {
   margin: 0;
-  max-width: 99rem;
+  max-width: 100rem;
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
@@ -52,7 +52,10 @@
 
   @media (max-width: $tablet) and (orientation: portrait) {
     max-width: 100%;
-    font-size: 3.6rem;
+
+    &--wrap {
+      font-size: 3.5rem;
+    }
   }
 
   @media (max-width: $tablet) and (orientation: landscape) {
@@ -188,12 +191,12 @@
 
 .text__word {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0;
   overflow: hidden;
 }
 
 .text__word > span {
-  transform: translate3d(0, 1em, 0);
+  transform: translate3d(0, 1.1em, 0);
   display: inline-block;
   line-height: 0.956;
 }
@@ -204,4 +207,5 @@
 
 .intro__title.active .text__word > span {
   transform: translate3d(0, 0, 0);
+  vertical-align: sub;
 }
