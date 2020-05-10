@@ -1211,7 +1211,7 @@ img {
 
 .intro__title {
   margin: 0;
-  max-width: 99rem;
+  max-width: 100rem;
   text-transform: uppercase;
   font-family: "Radical", "Arial", sans-serif;
   font-weight: 400;
@@ -1224,8 +1224,9 @@ img {
       font-size: 120px; } }
   @media (max-width: 1024px) and (orientation: portrait) {
     .intro__title {
-      max-width: 100%;
-      font-size: 3.6rem; } }
+      max-width: 100%; }
+      .intro__title--wrap {
+        font-size: 3.5rem; } }
   @media (max-width: 1024px) and (orientation: landscape) {
     .intro__title {
       font-size: 10rem; } }
@@ -1327,11 +1328,11 @@ img {
 
 .text__word {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0;
   overflow: hidden; }
 
 .text__word > span {
-  transform: translate3d(0, 1em, 0);
+  transform: translate3d(0, 1.1em, 0);
   display: inline-block;
   line-height: 0.956; }
 
@@ -1339,7 +1340,8 @@ img {
   transform: translate3d(0, 0, 0); }
 
 .intro__title.active .text__word > span {
-  transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0);
+  vertical-align: sub; }
 
 @keyframes logo-appear {
   from {
