@@ -182,7 +182,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
-  transition: 0.3s;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, outline 0.3s ease;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -201,7 +201,7 @@
 
   &:hover {
     color: $c-purple;
-    transition: 0.3s;
+    // transition: 0.3s;
   }
 
   &:focus {
@@ -209,7 +209,7 @@
     background-color: $c-light;
     border-color: $c-purple;
     outline: none;
-    transition: 0.3s;
+    // transition: 0.3s;
   }
 
   &:active,
@@ -217,7 +217,7 @@
     color: $c-purple;
     background-color: $c-light;
     border-color: $c-light;
-    transition: 0.3s;
+    // transition: 0.3s;
   }
 
   svg {
