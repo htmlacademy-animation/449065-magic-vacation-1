@@ -329,6 +329,9 @@
 .page-header__menu li a::after {
   display: block;
   width: 0%;
+  bottom: 0;
+  right: 0;
+  left: auto;
   transition: width 0.3s ease-in-out;
 }
 
@@ -336,6 +339,8 @@
 .page-header__menu li a:focus::after {
   display: block;
   width: 100%;
+  right: auto;
+  left: 0;
 }
 
 .page-header__menu li .active::after {
